@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>Movie Api Page</h1>
+    <%conunt = 0;%>
+    <%parsedData['Search'].forEach(function(movie){%>
+        <img src='<%=movie.Poster%>' alt='<%=movie.Title%> poster'>
+        <li><%= movie.Title%><ul>
+            <li>Made in <%=movie.Year%></li>
+            <li>Type: <%= movie.Type.toUpperCase();%></li>
+        </ul></li>
+        <% conunt += 1%>
+   <%})%>
+   <p><%= conunt%> Movies are Available for your Search Result</p>
+
+   <strong><a href="/">Search For Movie</a></strong>
+        
+</body>
+</html>
